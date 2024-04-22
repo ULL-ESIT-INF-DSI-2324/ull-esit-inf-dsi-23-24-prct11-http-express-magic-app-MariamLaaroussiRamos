@@ -23,19 +23,19 @@ app.get('/cards', (req, res) => {
   const { username, id } = req.query;
 
   if (!username) {
-    res.status(400).json({ error: 'Username is required' });
+    res.status(400).json({ error: 'Se requiere el nombre de usuario' });
     return;
   }
 
   if (!id) {
-    res.json({ message: 'No implementation for listing all cards' });
+    res.json({ message: 'No hay implementación para listar todas las cartas' });
   } else {
     const card = cardCollection.getCardById(parseInt(id.toString()));
     if (!card) {
-      res.status(404).json({ error: 'Card not found' });
+      res.status(404).json({ error: 'Carta no encontrada' });
       return;
     }
-    res.json({ success: true, message: 'Card details retrieved successfully', card });
+    res.json({ success: true, message: 'Detalles de la carta recuperados con éxito', card });
   }
 });
 
@@ -49,12 +49,12 @@ app.post(CARD_BASE_ROUTE, (req, res) => {
   const { id, name, cost, color, cardType, rarity, rulesText, marketValue, power, toughness, loyalty } = req.body;
 
   if (!username) {
-    res.status(400).json({ error: 'Username is required' });
+    res.status(400).json({ error: 'Se requiere el nombre de usuario' });
     return;
   }
 
   if (!id || !name || !cost || !color || !cardType || !rarity || !rulesText || !marketValue) {
-    res.status(400).json({ error: 'All fields are required for the card' });
+    res.status(400).json({ error: 'Todos los campos son necesarios para la carta' });
     return;
   }
 
@@ -72,7 +72,7 @@ app.post(CARD_BASE_ROUTE, (req, res) => {
     loyalty ? parseInt(loyalty) : undefined
   );
   cardCollection.addCard(newCard);
-  res.json({ success: true, message: 'Card added successfully' });
+  res.json({ success: true, message: 'Carta añadida exitosamente' });
 });
 
 /**
@@ -85,18 +85,18 @@ app.delete(`${CARD_BASE_ROUTE}/:id`, (req, res) => {
   const { id } = req.params;
 
   if (!username) {
-    res.status(400).json({ error: 'Username is required' });
+    res.status(400).json({ error: 'Se requiere el nombre de usuario' });
     return;
   }
 
   if (!id) {
-    res.status(400).json({ error: 'Card ID is required' });
+    res.status(400).json({ error: 'Se requiere el ID de la carta' });
     return;
   }
 
   cardCollection.removeCard(parseInt(id));
 
-  res.json({ success: true, message: 'Card deleted successfully' });
+  res.json({ success: true, message: 'Carta eliminada exitosamente' });
 });
 
 /**
@@ -112,9 +112,9 @@ app.patch('/cards', (req, res) => {
 
   const updatedCard = cardCollection.getCardById(carta.id);
   if (updatedCard) {
-    res.send({ message: 'Card updated successfully' });
+    res.send({ message: 'Carta actualizada exitosamente' });
   } else {
-    res.status(404).send({ error: 'Card not found' });
+    res.status(404).send({ error: 'Carta no encontrada' });
   }
 });
 
