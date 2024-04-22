@@ -46,6 +46,53 @@ describe('Cartas', function () {
   });
 });
 
+describe('PATCH /cards', function () {
+  it('Debería actualizar la información de una carta existente', function (done) {
+    const cartaActualizada = {
+      id: 1,
+      name: "Carta Actualizada",
+      cost: 10,
+      color: "Azul",
+      cardType: "Criatura",
+      rarity: "Común",
+      rulesText: "Nuevas reglas",
+      marketValue: 5
+    };
+
+    request.patch({
+      url: baseUrl + '/cards?username=test_user',
+      json: true,
+      body: cartaActualizada
+    }, function (error, response, body) {
+      expect(response.statusCode).to.equal(200);
+      // Aquí puedes agregar más expectativas para verificar que la carta se haya actualizado correctamente
+      done();
+    });
+  });
+
+  it('Debería devolver un error si la carta no existe', function (done) {
+    const cartaNoExistente = {
+      id: 999,
+      name: "Carta No Existente",
+      cost: 10,
+      color: "Negro",
+      cardType: "Encantamiento",
+      rarity: "Rara",
+      rulesText: "Reglas inexistentes",
+      marketValue: 3
+    };
+
+    request.patch({
+      url: baseUrl + '/cards?username=test_user',
+      json: true,
+      body: cartaNoExistente
+    }, function (error, response, body) {
+      expect(response.statusCode).to.equal(404);
+      done();
+    });
+  });
+});
+
   describe('DELETE /cards', function () {
     it('Debería notificar un error al intentar eliminar una carta no existente', function (done) {
       request.delete(baseUrl + '/cards?username=test_user&id=999', function (error, response, body) {

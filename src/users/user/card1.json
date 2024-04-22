@@ -1,10 +1,10 @@
 {
   "id": 1,
-  "name": "Black Lotus",
-  "cost": 20000,
-  "color": "Rojo",
-  "cardType": "Tierra",
-  "rarity": "Rara",
-  "rulesText": "prueba",
-  "marketValue": 1
+  "name": "Carta Actualizada",
+  "cost": 10,
+  "color": "Azul",
+  "cardType": "Criatura",
+  "rarity": "Común",
+  "rulesText": "Nuevas reglas",
+  "marketValue": 5
 }
