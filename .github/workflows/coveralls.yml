@@ -20,6 +20,8 @@ jobs:
         node-version: 21.x
     - name: Installing dependencies
       run: npm ci
+    - run: tsc
+    - run: node ./dist/Cartas/server.js &
     - name: Generating coverage information
       run: npm run coverage
     - name: Coveralls GitHub Action
