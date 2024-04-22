@@ -65,7 +65,6 @@ describe('PATCH /cards', function () {
       body: cartaActualizada
     }, function (error, response, body) {
       expect(response.statusCode).to.equal(200);
-      // Aquí puedes agregar más expectativas para verificar que la carta se haya actualizado correctamente
       done();
     });
   });
