@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "name": "Lightning Bolt",
+  "cost": 1,
+  "color": "Rojo",
+  "cardType": "Instantaneo",
+  "rarity": "Común",
+  "rulesText": "Lightning Bolt deals 3 damage to any target.",
+  "marketValue": 2
+}

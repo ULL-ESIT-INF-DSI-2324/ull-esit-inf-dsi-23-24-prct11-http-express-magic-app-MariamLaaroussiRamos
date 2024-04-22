@@ -1,0 +1,10 @@
+{
+  "id": 4,
+  "name": "Encantamiento de crecimiento",
+  "cost": 1,
+  "color": "Verde",
+  "cardType": "Encantamiento",
+  "rarity": "Común",
+  "rulesText": "La criatura objetivo obtiene +3/+3 hasta el final del turno.",
+  "marketValue": 2.4
+}

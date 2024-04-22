@@ -1,0 +1,10 @@
+{
+  "id": 6,
+  "name": "Prueba",
+  "cost": 20000,
+  "color": "Rojo",
+  "cardType": "Tierra",
+  "rarity": "Rara",
+  "rulesText": "probando la practica",
+  "marketValue": 2
+}
