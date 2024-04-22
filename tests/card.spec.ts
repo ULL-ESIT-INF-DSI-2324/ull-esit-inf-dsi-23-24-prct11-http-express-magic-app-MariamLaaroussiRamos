@@ -6,7 +6,6 @@ import request from 'request';
 const baseUrl = 'http://localhost:3000';
 
 describe('Cartas', function () {
-  // Prueba para la ruta GET /cards con ID de carta
   describe('GET /cards con ID de carta', function () {
     it('Debería devolver un error si la carta no existe', function (done) {
       request.get(baseUrl + '/cards?username=test_user&id=999', function (error, response, body) {
@@ -23,7 +22,6 @@ describe('Cartas', function () {
     });
   });
 
-  // Prueba para la ruta POST /cards
   describe('POST /cards', function () {
     it('Debería agregar una nueva carta al usuario', function (done) {
       const nuevaCarta = {
@@ -48,7 +46,6 @@ describe('Cartas', function () {
     });
   });
 
-  // Prueba para la ruta DELETE /cards
   describe('DELETE /cards', function () {
     it('Debería notificar un error al intentar eliminar una carta no existente', function (done) {
       request.delete(baseUrl + '/cards?username=test_user&id=999', function (error, response, body) {
