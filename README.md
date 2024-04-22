@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2324/ull-esit-inf-dsi-23-24-prct11-http-express-magic-app-MariamLaaroussiRamos/badge.svg?branch=main)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2324/ull-esit-inf-dsi-23-24-prct11-http-express-magic-app-MariamLaaroussiRamos?branch=main)
+[![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2324_ull-esit-inf-dsi-23-24-prct11-http-express-magic-app-MariamLaaroussiRamos&metric=coverage)](https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2324_ull-esit-inf-dsi-23-24-prct11-http-express-magic-app-MariamLaaroussiRamos)
 
 # Práctica 11 - Aplicación Express para coleccionistas de cartas Magic #
 ## Introducción #
