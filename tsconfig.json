@@ -1,5 +1,4 @@
 {
-  "reporter" : ["text-summary", "text"],
   "exclude": [
     "./tests",
     "./node_modules",
